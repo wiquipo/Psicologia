@@ -1,0 +1,399 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right,#ffffff, #000000);
+    font-weight: bold;
+    }
+    
+    .player{
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+  }
+    .wrapper{
+      border: 1px solid transparent;
+      padding: 40px;
+      padding-top: 20px;
+      border-radius: 20px;
+      background-color: #222529;
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+      /* align-items: center;
+      display: flex;
+      justify-content: center; */
+      /* top: 20px; */
+    }
+    .wrapper2{
+      border: 1px solid transparent;
+      padding: 30px;
+      border-radius: 20px;
+      background-color: #ddd;
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+    
+    .details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    }
+    
+    .track-art {
+    margin: 25px;
+    height: 200px;
+    width: 200px;
+    border:2px solid 	#FFFAFA;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    -moz-box-shadow: 0px 6px 5px black;
+    -webkit-box-shadow: 0px 6px 5px black;
+    box-shadow: 0px 6px 5px black;
+    -moz-border-radius:190px;
+    -webkit-border-radius:190px;
+    border-radius:190px;
+    }
+    
+    .now-playing {
+    font-size: 1rem;
+    color: white;
+    }
+    
+    .track-name {
+    font-size: 2.5rem;
+    color: white;
+    }
+    
+    .track-artist {
+    margin-top: 5px;
+    font-size: 1.5rem;
+    color: white;
+    }
+    
+    .buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 30px;
+    color: white;
+    }
+    .active{
+        color: black;
+    }
+    
+    .repeat-track,
+    .random-track,
+    .playpause-track,
+    .prev-track,
+    .next-track {
+    padding: 25px;
+    opacity: 0.8;
+    transition: opacity .2s;
+    color: white;
+    }
+    
+    .repeat-track:hover,
+    .random-track:hover,
+    .playpause-track:hover,
+    .prev-track:hover,
+    .next-track:hover {
+    opacity: 1.0;
+    }
+    
+    .slider_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    .seek_slider, .volume_slider {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 5px;
+    background: #83A9FF;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    }
+    
+    .seek_slider::-webkit-slider-thumb,
+    .volume_slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: white;
+    border: 3px solid #3774FF;
+    cursor: grab;
+    border-radius: 100%;
+    }
+    
+    .seek_slider:hover,
+    .volume_slider:hover {
+    opacity: 1.0;
+    }
+    
+    .seek_slider {
+    width: 60%;
+    }
+    
+    .volume_slider {
+    width: 30%;
+    }
+    
+    .current-time,
+    .total-duration {
+    padding: 10px;
+    color: white;
+    }
+    
+    i.fa-volume-down,
+    i.fa-volume-up {
+    padding: 10px;
+    color: white;
+    }
+    
+    i,
+    i.fa-play-circle,
+    i.fa-pause-circle,
+    i.fa-step-forward,
+    i.fa-step-backward,
+    p {
+    cursor: pointer;
+    }
+    .randomActive{
+        color: black;
+    }
+    .rotate {
+        animation: rotation 8s infinite linear;
+    }
+    @keyframes rotation {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(359deg);
+        }
+    }
+    .loader {
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .loader .stroke{
+        background: #f1f1f1;
+        height: 30px;
+        width: 10px;
+        border-radius: 50px;
+        margin: 0 5px;
+        animation: animate 1.4s linear infinite;
+    }
+      @keyframes animate {
+        50% {
+          height: 20%;
+          background: #4286f4;
+        }
+    
+        100% {
+          background: #4286f4;
+          height: 100%;
+        }
+      }
+      .stroke:nth-child(1){
+          animation-delay: 0s;
+      }
+      .stroke:nth-child(2){
+        animation-delay: 0.3s;
+    }
+    .stroke:nth-child(3){
+        animation-delay: 0.6s;
+    }
+    .stroke:nth-child(4){
+        animation-delay: 0.9s;
+    }
+    .stroke:nth-child(5){
+        animation-delay: 0.6s;
+    }
+    .stroke:nth-child(6){
+        animation-delay: 0.3s;
+    }
+    .stroke:nth-child(7){
+        animation-delay: 0s;
+    }
+
+
+/*################### ARTICULOS ###################*/
+
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    a {
+      text-decoration: none;
+      outline: none;
+    }
+    
+    a:hover {
+      text-decoration: underline;
+    }
+    
+    body {
+        font-family: 'Noto Sans JP', sans-serif;	
+      background: #f2f2f2;
+    }
+    
+    /* * ============================== */
+    /* * ============ HEADER ========== */
+    /* * ============================== */
+    
+    .navbar {
+      background: #222529;
+      position: static;
+      top: -50;
+    }
+    
+    .navbar a {
+      color: #fff;
+      display: inline-block;
+      padding: 20px;
+      width: 100%;
+      text-align: center;
+      color: #fff;
+      transition: .3s ease-out all;
+    }
+    
+    .navbar a:hover {
+      background: #ffffff;
+      color: #000;
+      text-decoration: none;
+    }
+    
+    .contenedor {
+      max-width: 1000px;
+      width: 90%;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+
+    }
+    
+    /* * ============================== */
+    /* * ===== CONTENEDOR IMAGEN ====== */
+    /* * ============================== */
+    
+    .contenedor-imagen {
+      height: 100vh;
+    }
+    
+    .contenedor-imagen img {
+      width: 100%;
+      height: 100%;
+      vertical-align: top;
+      object-fit: cover;
+      object-position: 0 bottom;
+    }
+    
+    /* * ============================== */
+    /* * ============ MAIN ============ */
+    /* * ============================== */
+    
+    main {
+      min-height: 100vh;
+      background: #222529;
+    }
+    
+    main .contenido p {
+      margin-bottom: 20px;
+      line-height: 30px;
+      color: whitesmoke;
+      text-align:justify;
+      /* justify-content:left; */
+      cursor: default;
+    }
+    
+    main .contenido .titulo {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: normal;
+      font-size: 50px;
+      padding-top: 40px;
+      color: lightskyblue;
+    }
+    
+    main .contenido .fecha {
+      font-size: 18px;
+      color:aquamarine;
+    }
+    
+    /* * ============================== */
+    /* * ============ ASIDE =========== */
+    /* * ============================== */
+    
+    aside {
+      min-width: 30%;
+      margin: 40px 20px 20px 0;
+      height: 100%;
+      background: #1D2F3D;
+      padding: 20px;
+      border-radius: 3px;
+      position: sticky;
+      top: 20px;
+    }
+    
+    aside .titulo {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: normal;
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #f2f2f2;
+    }
+    
+    aside .indice a {
+      display: block;
+      margin-bottom: 10px;
+      color: lightskyblue;
+    }
+    
+    /* * ============================== */
+    /* * ========== FOOTER ============ */
+    /* * ============================== */
+    footer .navbar {
+      position: static;
+      bottom: 0;
+    }
+    
+    
+    /* * ============================== */
+    /* * ====== MEDIA QUERIES ========= */
+    /* * ============================== */
+    @media screen and (max-width: 900px){
+      .navbar .contenedor {
+        flex-wrap: wrap;
+        margin: 0;
+        width: 100%;
+      }
+    
+      .navbar a {
+        width: auto;
+        flex: 1;
+      }
+    
+      .contenedor-imagen {
+        height: 50vh;
+      }
+    
+      main .contenedor {
+        flex-direction: column;
+      }
+    }
